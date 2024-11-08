@@ -20,11 +20,11 @@ The project is organized as follows:
 .
 ├── clip/                  
 ├── dataset/               # Contains datasets for training and evaluation
-│   ├── fruit/             # Specific dataset for 'fruit'
+│   ├── fruit/             # Dataset for 'fruit' (It is included in this repository.)
 │   │   ├── color/         # Sub-dataset for fruit color
 │   │   ├── instance/      # Sub-dataset for fruit instances
 │   │   └── species/       # Sub-dataset for fruit species
-│   ├── cifar10/           # Specific dataset for CIFAR-10
+│   ├── cifar10/           # Dataset for CIFAR-10 (Please download the dataset via the link provided in the Datasets section, then extract it and place corresponding folders in the specified directory.)
 │   │   ├── type/          # Sub-dataset for CIFAR-10 type clustering (e.g., transportation, animals)
 │   │   └── environment/   # Sub-dataset for CIFAR-10 environment clustering (e.g., land, air, water)
 ├── gpt.py                 # Implementation related to GPT
