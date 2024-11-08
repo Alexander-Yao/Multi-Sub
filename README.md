@@ -43,9 +43,10 @@ pip install -r requirements.txt
 ```
 
 ## Datasets
-
+Please refer to [link](https://drive.google.com/file/d/1ZFazIH2hnXXO-2X1nPs7jVxXuGmPWPn3/view?usp=drive_link) to download the CIFAR10 dataset, and follow the Folder Structure to place the dataset in the dataset directory.
 
 ## Training and evaluation
+Please change dataset_path_dict to adapt to different datasets
 ```python
 python main.py
 ```
@@ -53,6 +54,14 @@ python main.py
 ## Bibtex
 Please cite our paper if you use this code in your own work:
 ```
-
+@misc{yao2024customizedmultipleclusteringmultimodal,
+      title={Customized Multiple Clustering via Multi-Modal Subspace Proxy Learning}, 
+      author={Jiawei Yao and Qi Qian and Juhua Hu},
+      year={2024},
+      eprint={2411.03978},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2411.03978}, 
+}
 
 ```
