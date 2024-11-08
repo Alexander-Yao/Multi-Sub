@@ -30,8 +30,8 @@ The project is organized as follows:
 ├── gpt.py                 # Implementation related to GPT
 ├── main.py                # Main script to run training and evaluation
 ├── parse.py               # Argument parsing for command-line execution
-├── README.md              # This README file
-├── requirements.txt       # Dependencies required for running the project
+├── README.md              # This is the README file
+├── requirements.txt       # Dependencies are required for running the project
 └── setup.py               # Installation setup
 ```
 
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```
 
 ## Datasets
-Please refer to http://faculty.washington.edu/juhuah/images/AugDMC_datasets.zip
+
 
 ## Training and evaluation
 ```python
