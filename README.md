@@ -1,6 +1,16 @@
-# Multi-Sub(Neruips'24)
+<div align='center'>
 
-This repository contains the implementation of Multi-Sub.
+# Customized Multiple Clustering via Multi-Modal Subspace Proxy Learning
+
+NeurIPS 2024
+
+[Jiawei Yao](https://alexander-yao.github.io/), [Qi Qian](https://scholar.google.com/citations?user=Rp_40_gAAAAJ&hl=en&oi=ao), [Juhua Hu](http://faculty.washington.edu/juhuah/)*
+</div>
+
+| ![space-1.jpg](teaser.jpg) | 
+|:--:| 
+| ***The flow chart of Multi-Sub**: Multi-Sub obtains a desired clustering based on the subspace spanned by reference words provided by GPT-4 using users' high-level interest.* |
+
 
 ## Folder Structure
 
@@ -25,22 +35,24 @@ The project is organized as follows:
 └── setup.py               # Installation setup
 ```
 
+
 ## Requirements
 To run this project, ensure you have the following dependencies installed:
 ```python
 pip install -r requirements.txt
 ```
 
-## Usage
+## Datasets
+Please refer to http://faculty.washington.edu/juhuah/images/AugDMC_datasets.zip
+
+## Training and evaluation
 ```python
 python main.py
 ```
 
-## Citation
-If you use this code in your research, please cite our paper:
-@inproceedings{yourpaper2024,
-  author    = {Your Name and Co-author Name},
-  title     = {Your Paper Title},
-  booktitle = {Conference Name, {YEAR}},
-  year      = {2024}
-}
+## Bibtex
+Please cite our paper if you use this code in your own work:
+```
+
+
+```
