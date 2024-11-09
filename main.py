@@ -47,21 +47,6 @@ def reference_word_embedding(self, text):
         embedding.append(tmp)
     return torch.stack(embedding)
 
-# def clustering_quality_loss(embeddings, labels, margin=1.0, lambda_factor=0.5):
-    # """Calculate clustering quality loss with intra- and inter-cluster components."""
-    # distance_matrix = torch.cdist(embeddings, embeddings, p=2)
-
-    # intra_cluster_mask = labels.unsqueeze(0) == labels.unsqueeze(1)
-    # intra_cluster_distances = distance_matrix * intra_cluster_mask.float()
-    # intra_cluster_loss = intra_cluster_distances.sum() / intra_cluster_mask.sum()
-
-    # inter_cluster_mask = labels.unsqueeze(0) != labels.unsqueeze(1)
-    # inter_cluster_distances = distance_matrix * inter_cluster_mask.float()
-    # inter_cluster_loss = F.relu(margin - inter_cluster_distances).sum() / inter_cluster_mask.sum()
-
-    # # Weighted combination of intra- and inter-cluster loss
-    # loss = lambda_factor * intra_cluster_loss + (1 - lambda_factor) * inter_cluster_loss
-    # return loss
 
 def clustering_quality_loss(embeddings, labels, lambda_value=0.5, margin=1.0):
     distance_matrix = torch.cdist(embeddings, embeddings, p=2)
@@ -74,6 +59,7 @@ def clustering_quality_loss(embeddings, labels, lambda_value=0.5, margin=1.0):
     inter_cluster_distances = distance_matrix * inter_cluster_mask.float()
     inter_cluster_loss = F.relu(margin - inter_cluster_distances).sum() / inter_cluster_mask.sum()
 
+    # Weighted combination of intra- and inter-cluster loss
     loss = lambda_value * intra_cluster_loss + (1 - lambda_value) * inter_cluster_loss
     return loss
 
@@ -81,7 +67,6 @@ def clustering_quality_loss(embeddings, labels, lambda_value=0.5, margin=1.0):
 
 if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    # device = "cpu"
     args = get_parse()
     alpha = args.alpha
 
@@ -112,11 +97,6 @@ if __name__ == "__main__":
         model.encode_text_with_learnt_tokens = funcType(encode_text_with_learnt_tokens, model)
         model.encode_reference_word = funcType(reference_word_embedding, model)
         model = model.float()
-
-        # for param in model.parameters():
-            # param.requires_grad = False
-        # for param in model.visual.parameters():
-            # param.requires_grad = True
 
         torch.cuda.empty_cache()
         print("Data path:", _data_path, _prompt)
@@ -267,6 +247,7 @@ if __name__ == "__main__":
                 image_embeddings = np.stack(image_embedding_list)
                 combined_embeddings = np.hstack((word_embeddings, image_embeddings))
 
+                # pseudo_labels
                 similarity_matrix = torch.matmul(torch.tensor(combined_embeddings).to(device), gpt_embeddings.T)
                 pseudo_labels = similarity_matrix.argmax(dim=1).to(device)
                 
