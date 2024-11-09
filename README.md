@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```
 
 ## Datasets
-Please refer to [Fruit](https://faculty.washington.edu/juhuah/images/AugDMC_datasets.zip) and [CIFAR-10](https://faculty.washington.edu/juhuah/images/cifar10_mc.zip) to download datasets, and follow the Folder Structure to place the datasets in the dataset directory.
+Please refer to [Fruit](https://faculty.washington.edu/juhuah/images/AugDMC_datasets.zip) and [CIFAR-10](https://faculty.washington.edu/juhuah/images/cifar10_mc.zip) to download datasets, and create a dataset directory according to the folder structure and place the datasets in it.
 
 ## Training and evaluation
 Please change dataset_path_dict to adapt to different datasets
