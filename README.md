@@ -20,7 +20,7 @@ The project is organized as follows:
 .
 ├── clip/                  
 ├── dataset/               # Contains datasets for training and evaluation
-│   ├── fruit/             # Dataset for 'fruit' (It is included in this repository.)
+│   ├── fruit/             # Dataset for Fruit (Please download the dataset via the link provided in the Datasets section, then extract it and place corresponding folders in the specified directory.)
 │   │   ├── color/         # Sub-dataset for fruit color
 │   │   ├── instance/      # Sub-dataset for fruit instances
 │   │   └── species/       # Sub-dataset for fruit species
@@ -43,7 +43,7 @@ pip install -r requirements.txt
 ```
 
 ## Datasets
-Please refer to [link](https://drive.google.com/file/d/1ZFazIH2hnXXO-2X1nPs7jVxXuGmPWPn3/view?usp=drive_link) to download the CIFAR10 dataset, and follow the Folder Structure to place the dataset in the dataset directory.
+Please refer to [Fruit](https://faculty.washington.edu/juhuah/images/AugDMC_datasets.zip) and [CIFAR-10](https://faculty.washington.edu/juhuah/images/cifar10_mc.zip) to download datasets, and follow the Folder Structure to place the datasets in the dataset directory.
 
 ## Training and evaluation
 Please change dataset_path_dict to adapt to different datasets
