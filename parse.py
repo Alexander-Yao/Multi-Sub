@@ -1,4 +1,4 @@
-# Provides default values and helpful descriptions for each parameter and allows flexible configuration of training parameters.
+# Provides default values and helpful descriptions for each parameter, and allows flexible configuration of training parameters.
 
 import argparse
 
