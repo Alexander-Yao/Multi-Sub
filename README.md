@@ -27,7 +27,7 @@ The project is organized as follows:
 │   ├── cifar10/           # Dataset for CIFAR-10 (Please download the dataset via the link provided in the Datasets section, then extract it and place corresponding folders in the specified directory.)
 │   │   ├── type/          # Sub-dataset for CIFAR-10 type clustering (e.g., transportation, animals)
 │   │   └── environment/   # Sub-dataset for CIFAR-10 environment clustering (e.g., land, air, water)
-├── gpt.py                 # Implementation related to GPT
+├── gpt.py                 # Sends a prompt to OpenAI's GPT model and retrieves generated reference words
 ├── main.py                # Main script to run training and evaluation
 ├── parse.py               # Argument parsing for command-line execution
 ├── README.md              # This is the README file
