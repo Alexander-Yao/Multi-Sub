@@ -1,3 +1,5 @@
+# Interact with OpenAI's API using Python to generate reference words to user's interest.
+
 import openai
 
 openai.api_key = "sk-....<INSERT_YOUR_API_KEY_HERE>"
