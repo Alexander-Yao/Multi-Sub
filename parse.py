@@ -1,3 +1,5 @@
+# Provides default values and helpful descriptions for each parameter and allows flexible configuration of training parameters.
+
 import argparse
 
 
@@ -5,7 +7,7 @@ def get_parse():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--dataset', type=str, default="fruit", help='dataset')
-    parser.add_argument('--batch_size', type=int, default=20, help='training batch size')
+    parser.add_argument('--batch_size', type=int, default=50, help='training batch size')
     parser.add_argument('--alpha', type=float, default=0.2, help='alpha')
     parser.add_argument('--beta', type=float, default=0.2, help='beta')
     parser.add_argument('--seed', type=int, default=1, help='seed')
