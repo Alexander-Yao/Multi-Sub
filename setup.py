@@ -1,3 +1,5 @@
+# It is designed to streamline the installation and usage of clip and its dependencies.
+
 import os
 
 import pkg_resources
